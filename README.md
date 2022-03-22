@@ -13,12 +13,12 @@ calculateand generates the list of payments of the simple interest of a credit t
                       } 
    * GET http://localhost:8080/simpleInterest/payments (to get all petitions made)
    * DELETE http://localhost:8080/simpleInterest/payments (to delete all petitions made)
-5. You see the DB at http://localhost:8080/h2-console bd:"mem:aplazodb" user:"root", password: (empty)
+5. You see the DB at http://localhost:8080/h2-console JDBC URL:"jdbc:h2:mem:aplazodb" user:"root", password: (empty)
 
 # Create Docker Image
-mvn package 
-docker build -t docker/simple_interest-service:v0.1 .
+   * mvn package 
+   * docker build -t docker/simple_interest-service:v0.1 .
 
 # Run Docker Image
-docker run -p 8080:8080 aplazo/simple_interest-service:v0.1
+docker run -p 8080:8080 docker/simple_interest-service:v0.1
 
