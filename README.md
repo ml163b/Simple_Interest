@@ -17,7 +17,7 @@ calculateand generates the list of payments of the simple interest of a credit t
 
 # Create Docker Image
 mvn package 
-docker build -t docker/simple_interest-service:v0.1
+docker build -t docker/simple_interest-service:v0.1 .
 
 # Run Docker Image
 docker run -p 8080:8080 aplazo/simple_interest-service:v0.1
